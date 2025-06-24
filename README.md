@@ -30,3 +30,12 @@ go run main.go
     "data": "любые_данные_для_обработки",
     "priority": "high|medium|low"
 }
+```
+### Пример ответа
+```json
+{
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "status": "queued"
+}
+```
+
