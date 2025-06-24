@@ -38,4 +38,19 @@ go run main.go
     "status": "queued"
 }
 ```
-
+### Проверить статус
+**Метод:** `GET /api/v1/tasks/{id}`  
+### Пример ответа
+```json
+{
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "status": "processing",
+    "created_at": "2025-06-15T14:30:45Z",
+    "duration": "125 sec",
+    "progress": 45.5,
+    "result": null
+}
+```
+### ❌ Удалить задачу
+**Метод:** `DELETE /api/v1/tasks/{id}`  
+### Ответ: HTTP 204 No Content
