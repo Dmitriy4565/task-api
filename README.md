@@ -27,15 +27,18 @@ go run main.go
 **Тело запроса (JSON):**
 ```json
 {
-    "data": "любые_данные_для_обработки",
-    "priority": "high|medium|low"
+    "data": "Любой файл для обработки"
 }
 ```
 ### Пример ответа
 ```json
 {
-    "id": "550e8400-e29b-41d4-a716-446655440000",
-    "status": "queued"
+    "data": {
+        "id": "aa49a0d2-4b28-491e-914d-b6b02f3fca0b",
+        "status": "pending",
+        "created_at": "2025-06-24T19:49:19.338204963+03:00"
+    },
+    "success": true
 }
 ```
 ### Проверить статус
@@ -43,12 +46,15 @@ go run main.go
 ### Пример ответа
 ```json
 {
-    "id": "550e8400-e29b-41d4-a716-446655440000",
-    "status": "processing",
-    "created_at": "2025-06-15T14:30:45Z",
-    "duration": "125 sec",
-    "progress": 45.5,
-    "result": null
+    "data": {
+        "id": "aa49a0d2-4b28-491e-914d-b6b02f3fca0b",
+        "status": "completed",
+        "created_at": "2025-06-24 19:49",
+        "duration": "2 sec",
+        "result": "task completed successfully",
+        "progress": 97
+    },
+    "success": true
 }
 ```
 ### ❌ Удалить задачу
