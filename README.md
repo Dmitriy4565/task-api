@@ -20,3 +20,13 @@ git clone https://github.com/your-repo/task-manager.git
 cd task-manager
 go mod download
 go run main.go
+```
+## 📚 API Endpoints
+### 🆕 Создать задачу
+**Метод:** `POST /api/v1/tasks`  
+**Тело запроса (JSON):**
+```json
+{
+    "data": "любые_данные_для_обработки",
+    "priority": "high|medium|low"
+}
