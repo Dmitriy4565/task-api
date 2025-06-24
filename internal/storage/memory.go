@@ -42,6 +42,7 @@ func (s *MemoryTaskStorage) Get(id string) (*models.Task, error) {
 	return task, nil
 }
 
+// ff
 func (s *MemoryTaskStorage) Delete(id string) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
