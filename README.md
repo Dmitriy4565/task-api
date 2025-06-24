@@ -16,8 +16,9 @@
 
 ### Установка
 ```bash
-git clone https://github.com/your-repo/task-manager.git
-cd task-manager
+git clone https://github.com/Dmitriy4565/task-api/
+cd task-api
+git checkout master
 go mod download
 go run main.go
 ```
